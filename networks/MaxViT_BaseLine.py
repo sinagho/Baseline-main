@@ -753,14 +753,14 @@ class MyDecoderLayer(nn.Module):
                                              drop=0.,
                                              drop_path=0.,
                                              act_layer=nn.GELU,
-                                             reduction=8,
+                                             reduction=reduction_ratio,
                                              linear=False)
         self.layer_Tr_2 = BaselineAttnBlock(dim= out_dim,
                                              mlp_ratio=4.,
                                              drop=0.,
                                              drop_path=0.,
                                              act_layer=nn.GELU,
-                                             reduction=8,
+                                             reduction=reduction_ratio,
                                              linear=False)
 
         def init_weights(self):
